@@ -6,5 +6,117 @@
 
 .container {
   margin: 0 auto;
-  max-width: ;
+  max-width: 1140px;
+}
+
+.flex {
+  display: flex;
+}
+
+.brd-rad {
+  border-radius: 25px;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+/*
+*****
+DEBUG
+*****
+*/
+
+.debug {
+  height: 75px;
+}
+
+header section .debug {
+  height: 345px;
+}
+
+/*
+*****
+HEADER
+*****
+*/
+
+nav {
+  background-color: #0084fd;
+}
+
+.menu {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-box {
+  max-width: 100%;
+  padding-top: 50px;
+  gap: 25px;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header section .left {
+  width: calc(((100% / 3) * 2) - 25px);
+}
+
+header section .right,
+header section .cent {
+  width: calc((100% / 3) - 25px);
+}
+
+header section .brd-rad {
+  background-color: #b5ddff;
+}
+
+/*
+*****
+MEDIA
+*****
+*/
+
+/* Desktop */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 32px;
+  }
+  .hide-desktop {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  section .flex {
+    display: block;
+  }
+  header section .left,
+  header section .right,
+  header section .cent {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  header section div:last-child {
+    margin-bottom: 80px;
+  }
 }
