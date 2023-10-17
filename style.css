@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
 }
 
-.container2{
+.container2 {
   margin: 0 auto;
   max-width: 570px;
 }
@@ -26,16 +30,21 @@
   display: none;
 }
 
-/*
-*********************************************************
-DEBUG
-*********************************************************
-*/
-
-.debug {
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 30px;
 }
 
-header section .debug {
+button:hover {
+  cursor: pointer;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
 }
 
 /*
@@ -46,43 +55,97 @@ HEADER
 
 nav {
   background-color: #0084fd;
+  color: white;
 }
 
 .menu {
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  padding: 20px 0 20px;
 }
 
 .header-box {
   max-width: 100%;
-  padding-top: 3.125rem;
+  padding: 50px 0 110px;
   gap: 1.5625rem;
   flex-wrap: wrap;
-}
-
-header section div:last-child{
-margin-bottom: 110px;
+  justify-content: center;
 }
 
 header ul {
   list-style: none;
   display: flex;
   gap: 1.25rem;
+  align-items: center;
+}
+
+header nav ul li button {
+  background-color: white;
+}
+
+header nav ul li button a {
+  color: black;
 }
 
 header section .left {
   width: calc(((100% / 3) * 2) - 25px);
 }
 
-header section .right,
+.squ-l {
+  width: 50%;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.squ-r {
+  position: relative;
+}
+
+.squ-r img {
+  max-width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+
 header section .cent {
   width: calc((100% / 3) - 25px);
+  padding: 35px;
 }
 
 header section .brd-rad {
   background-color: #b5ddff;
-  height: 345px;
+  text-align: center;
+  line-height: 28px;
+}
+
+header section .brd-rad i,
+header section .brd-rad h4 {
+  color: #0084fd;
+}
+
+header section .brd-rad h4 {
+  font-size: 24px;
+  padding: 40px 0 40px;
+}
+
+header section .brd-rad i {
+  font-size: 70px;
+  padding-bottom: 30px;
+}
+
+header section .brd-rad button {
+  background-color: #0084fd;
+  margin-top: 40px;
+  padding: 10px 45px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header section .brd-rad button i {
+  color: white;
+  font-size: 18px;
+  padding: 0 8px 0 0;
 }
 
 /*
@@ -94,118 +157,262 @@ MAIN
 .first-main {
   background-color: #9792e4;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 .img-first-main {
-  width: 50%;
+  width: 40%;
+  padding-bottom: 70px;
 }
 
-.ifm-left {ß
-  background-color: yellow;
+.first-main .flex {
+  justify-content: center;
+  gap: 60px;
+  align-items: flex-end;
 }
 
-.ifm-left-top{
-  margin-top: 140px;
-  background-color: yellow;
-  height: 400px;
+main section .img-first-main .ifm-left-top img {
+  width: 100%;
+  margin: 135px 0 120px;
 }
 
-.ifm-left-bottom{
-  margin-top: 130px
+.ifm-left-bottom {
+  color: white;
+}
+
+.ifm-left-bottom h3 {
+  margin-bottom: 60px;
+  font-size: 34px;
+  font-weight: bold;
 }
 
 .ifm-right {
-  height: 555px;
-  margin-top: 310px;
   background-color: #ffffff;
-}
-
-.second-main{
   text-align: center;
+  margin-top: 310px;
+  padding: 35px;
 }
 
-.second-main{
+.ifm-right img {
+  width: 60%;
+}
+
+.ifm-right h3 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.ifm-right p {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 35px;
+  margin: 30px 0;
+}
+
+.ifm-right i {
+  background-color: #9792e4;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/*---------------------------------------------------------
+FINE FIRST MAIN
+---------------------------------------------------------*/
+
+.second-main {
   padding: 70px 0 115px;
+  text-align: center;
+  font-size: 20px;
 }
 
-.second-main .container h2{
+.second-main .container h2 {
   color: #9792e4;
   margin: 40px 0 45px;
+  font-size: 48px;
 }
 
-.box-sm{
-  height: 280px;
+.box-sm {
   margin-top: 35px;
   background-color: #9792e4;
   align-items: center;
   color: white;
   text-align: left;
   gap: 65px;
-  padding: 15px;
+  padding: 30px 65px 30px 20px;
 }
 
-.face{
+.name {
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+.description {
+  line-height: 40px;
+}
+
+.description i {
+  font-size: 250x;
+}
+
+.second-main img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: yellow;
-  
+  object-fit: cover;
 }
 
-.info{
+.info {
   width: 75%;
 }
 
-.third-main{
+/*---------------------------------------------------------
+FINE SECOND MAIN
+---------------------------------------------------------*/
+
+.third-main {
   background-color: #9792e4;
   padding: 85px 0 65px;
 }
 
 .third-main h2 {
-text-align: center;
-margin-bottom: 75px;
+  text-align: center;
+  margin-bottom: 75px;
+  font-size: 48px;
+  color: white;
 }
 
-.boxes-tm{
+.number {
+  font-size: 72px;
+  color: #9792e4;
+}
+
+.title-card {
+  font-size: 24px;
+  color: #9792e4;
+  padding: 30px 0;
+  font-weight: bold;
+}
+
+.third-main p {
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.third-main button {
+  background-color: #9792e4;
+  padding: 15px 50px;
+  color: #ffffff;
+}
+
+a:link {
+  color: #ffffff;
+}
+
+.boxes-tm {
   gap: 25px;
   flex-wrap: wrap;
   padding: 0 30px;
 }
 
-.box-tm{
+.box-tm {
   background-color: white;
-width: calc((100% - 50px) / 3);
- height: 420px;
+  width: calc((100% - 50px) / 3);
+  padding: 50px 35px 25px;
 }
 
-.fourth-main{
+/*---------------------------------------------------------
+FINE THIRD MAIN
+---------------------------------------------------------*/
+
+.fourth-main {
   padding: 100px 65px;
 }
 
-.fourth-main .flex{
-  align-items: center;
+.fourth-main h2 {
+  font-size: 72px;
+  color: #9792e4;
+}
+
+.fourth-main p {
+  line-height: 40px;
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.fourth-main img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fourth-main button {
+  background-color: #9792e4;
+}
+
+.fa-quote-left {
+  color: #9792e4;
+  position: absolute;
+  right: 55px;
+  top: auto;
+  font-size: 72px;
+}
+
+.fourth-main button i {
+  padding-right: 8px;
+}
+
+.aboutus {
+  color: #9792e4;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 30px 0;
+}
+
+.fourth-main .flex {
   justify-content: space-between;
   gap: 70px;
 }
 
-.box-f-left{
-  max-width: 85%;
+.box-f-left {
+  max-width: 75%;
 }
 
-.box-f-right{
-  max-width: 25%
+.box-f-right {
+  max-width: 25%;
 }
 
-.fifth-main{
+/*---------------------------------------------------------
+FINE FOURTH MAIN
+---------------------------------------------------------*/
+
+.fifth-main {
   text-align: center;
   background-color: #9792e4;
   padding: 65px 0;
+  color: white;
+  font-size: 18px;
 }
 
-h1{
+h1 {
   color: #fdc15f;
+  font-size: 96px;
 }
 
+.fifth-main h2 {
+  font-size: 48px;
+}
+
+.fifth-main button {
+  background-color: white;
+  color: #9792e4;
+  margin: 30px;
+}
+
+/*---------------------------------------------------------
+FINE FIFTH MAIN
+---------------------------------------------------------*/
 
 /*
 *********************************************************
@@ -213,10 +420,20 @@ FOOTER
 *********************************************************
 */
 
-footer{
+footer {
   background-color: #333333;
+  color: white;
+  text-align: center;
 }
 
+footer div {
+  padding: 40px 0;
+}
+
+footer a {
+  color: #9792e4;
+  text-decoration: underline;
+}
 
 /*
 *********************************************************
@@ -233,51 +450,92 @@ MEDIA
 
 /* Tablet */
 @media screen and (max-width: 768px) {
-  header {
-    padding: 0 32px;
+  /*---------------------------------------------------------
+  HEADER
+  ---------------------------------------------------------*/
+
+  nav {
+    padding: 0 30px;
   }
+
   .hide-desktop {
     display: block;
   }
 
   nav ul {
     display: none;
+    padding: 0 30px;
   }
 
-  main .first-main .flex{
+  .squ-l {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .squ-r img {
+    bottom: 0;
+  }
+
+  header section .header-box .flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /*---------------------------------------------------------
+  MAIN
+  ---------------------------------------------------------*/
+
+  main .first-main .flex {
     display: block;
   }
 
-  .img-first-main{
-width: 100%;
-padding: 40px 35px;
+  .ifm-right {
+    margin-top: 0;
   }
-  
-.second-main {
-  padding: 30px;
-}
 
-.box-sm{
-  height: auto;
-  gap: 30px;
-}
+  main section .img-first-main .ifm-left-top img {
+    margin: 0;
+  }
 
-.box-tm{
-width: calc((100% - 25px) / 2);
-} 
+  .img-first-main {
+    width: 100%;
+    padding: 40px 35px;
+  }
 
-.fourth-main{
-  padding: 100px 65px 160px;
-}
+  .second-main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-.box-f-left{
-  max-width: 50%;
-}
+  .box-sm {
+    height: auto;
+    gap: 30px;
+  }
 
-.box-f-right{
-  max-width: 50%
-}
+  .box-tm {
+    width: calc((100% - 25px) / 2);
+  }
 
+  .fourth-main {
+    padding: 100px 65px 160px;
+  }
+
+  .fa-quote-left {
+    right: 90px;
+    top: auto;
+  }
+
+  .box-f-left {
+    max-width: 50%;
+  }
+
+  .box-f-right {
+    max-width: 50%;
+  }
+
+  .fifth-main {
+    padding: 65px 120px;
+  }
 }
 
 /* Mobile */
@@ -292,38 +550,59 @@ width: calc((100% - 25px) / 2);
     margin-bottom: 25px;
   }
 
-  header section div:last-child {
-    margin-bottom: 80px;
+  .header-box {
+    padding: 50px 30px 80px;
   }
 
-.boxes-second-main .flex{
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .squ-l button {
+    margin-bottom: 270px;
+  }
 
-.face{
-  margin-bottom: 25px;
-}
+  .squ-r img {
+    right: 0px;
+  }
 
-.third-main .flex{
-  display: block;
-}
+  .boxes-second-main .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.box-tm{
-  width: 100%;
-  margin-bottom: 30px;
-}
+  .box-sm {
+    text-align: center;
+    padding: 30px 0;
+  }
 
-.fourth-main .flex{
-  display: block;
-}
+  .third-main .flex {
+    display: block;
+  }
 
-.box-f-left{
-  max-width: 100%;
-}
+  .box-tm {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
-.box-f-right{
-  max-width: 100%
-}
+  .fourth-main .flex {
+    display: block;
+  }
 
+  .fa-quote-left {
+    right: 210px;
+    top: auto;
+  }
+
+  .box-f-left {
+    max-width: 100%;
+  }
+
+  .box-f-right {
+    max-width: 100%;
+  }
+
+  .fifth-main {
+    padding: 65px 30px;
+  }
+
+  footer div {
+    padding: 40px 30px;
+  }
 }
